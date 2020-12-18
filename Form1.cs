@@ -43,7 +43,8 @@ namespace NasaPhotos
 
             pictureBox1.Image.Save(path + imageTitle+".jpeg",  ImageFormat.Jpeg);
 
-            
+            string message = "Picture saved !!!";
+            MessageBox.Show(message);
         }
 
         
