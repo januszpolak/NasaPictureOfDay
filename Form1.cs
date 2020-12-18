@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
+using System.Drawing.Imaging;
 using System.Net;
 using System.Windows.Forms;
 
@@ -30,7 +31,21 @@ namespace NasaPhotos
             var desc = nasaResults.explanation;
             textBox1.Text = desc;
 
+            
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            var imageTitle = label1.Text;
+            var path = @"D:\NasaPhotos\Images\";
+
+            pictureBox1.Image.Save(path + imageTitle+".jpeg",  ImageFormat.Jpeg);
+
+            
+        }
+
+        
     }
 }
